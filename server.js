@@ -12,6 +12,7 @@ const save = require("./save");
 const getExpiresAt = expiresIn => {
   return new Date().getTime() / 1000 + expiresIn;
 };
+const basicAuth = new Buffer(clientID + ":" + clientSecret).toString("base64"); 
 
 app.use('/app', express.static('./dist'));
   //req.params.file ? res.sendFile(path.join(__dirname, 'dist', req.params.file)) : res.sendFile(path.join(__dirname, 'dist', 'index.html'));
@@ -29,7 +30,7 @@ app.get("/callback*", (req, res) => {
     },
     headers: {
       Authorization:
-        "Basic " + new Buffer(clientID + ":" + clientSecret).toString("base64")
+        "Basic " + basicAuth
     }
   };
   request.post(options, (err, response, body) => {
@@ -55,7 +56,7 @@ app.get("/refresh/:token", (req, res) => {
     },
     headers: {
       Authorization:
-        "Basic " + new Buffer(clientID + ":" + clientSecret).toString("base64")
+        "Basic " + basicAuth
     }
   };
   request.post(options, (err, response, body) => {
