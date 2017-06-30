@@ -1,0 +1,39 @@
+#search {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-width: 3px;
+    border-color: white;
+    background-color: transparent;
+    color: pink;
+    outline: none;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+}
+
+#searchWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+}
+
+#drag {
+    -webkit-app-region: drag;
+    height: 25px;
+    /*background-color: rgba(0, 0, 0, .1);*/
+}
+
+body, html {
+    margin: 0;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(255,255,255,.5);
+}
+
+/*line height?*/

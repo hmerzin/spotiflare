@@ -1,0 +1,41 @@
+body {
+    padding-top: 20px;
+    text-align: center;
+}
+
+#login {
+    text-align: center;
+    border-color: #ff8a80;
+    border-width: .5px;
+    border-style: solid;
+    width: 300px;
+    height: 35px;
+    border-radius: 30px;
+    font-family: Helvetica Neue;
+    font-weight: 300;
+    text-decoration: none;
+    color: #ff8a80;
+    font-size: 20px;
+    letter-spacing: 2px;
+    display: inline-flex;
+    justify-content: center;
+    vertical-align: baseline;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    padding: 0;
+}
+
+h1 {
+    font-family: Helvetica Neue;
+    font-size: 60px;
+    color: white;
+
+}
+
+#loginWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
