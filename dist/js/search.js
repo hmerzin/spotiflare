@@ -12,5 +12,6 @@ window.search = (term, after) => {
     return response.json();
   }).then(json => {
     console.log(json)
+    after(json);
   });
 };
